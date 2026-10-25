@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FleetFlow - Logistics Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>FleetFlow</h1>
+      <p>Logistics & Fleet Management</p>
+    </div>
+    <span class="status">● System Online</span>
+  </header>
+
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#shipments">Shipments</a>
+    <a href="#drivers">Drivers</a>
+    <a href="#vehicles">Vehicles</a>
+  </nav>
+
+  <main>
+    <section id="dashboard">
+      <h2>Fleet Dashboard</h2>
+      <p class="subtitle">Manage your deliveries in one place.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <p>Total Shipments</p>
+          <h3 id="total">0</h3>
+        </div>
+        <div class="stat">
+          <p>In Transit</p>
+          <h3 id="transit">0</h3>
+        </div>
+        <div class="stat">
+          <p>Delivered</p>
+          <h3 id="delivered">0</h3>
+        </div>
+        <div class="stat">
+          <p>Available Vehicles</p>
+          <h3 id="available">3</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="shipments" class="panel">
+      <h2>Shipment Management</h2>
+      <form id="shipment-form">
+        <input id="shipment-name" placeholder="Shipment or customer name" required>
+        <input id="destination" placeholder="Delivery destination" required>
+        <select id="driver">
+          <option>Ravi Kumar</option>
+          <option>Priya Sharma</option>
+          <option>Arun Reddy</option>
+        </select>
+        <button type="submit">Add Shipment</button>
+      </form>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Shipment</th>
+              <th>Destination</th>
+              <th>Driver</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="shipment-list"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="drivers" class="panel">
+      <h2>Drivers</h2>
+      <div class="info-grid">
+        <div class="info-card">👤 Ravi Kumar <p>Driver ID: D001</p></div>
+        <div class="info-card">👤 Priya Sharma <p>Driver ID: D002</p></div>
+        <div class="info-card">👤 Arun Reddy <p>Driver ID: D003</p></div>
+      </div>
+    </section>
+
+    <section id="vehicles" class="panel">
+      <h2>Vehicles</h2>
+      <div class="info-grid">
+        <div class="info-card">🚚 Truck 01 <p>Available</p></div>
+        <div class="info-card">🚐 Van 02 <p>Available</p></div>
+        <div class="info-card">🚛 Truck 03 <p>Available</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    FleetFlow | Task 5 - CodSoft Internship
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
